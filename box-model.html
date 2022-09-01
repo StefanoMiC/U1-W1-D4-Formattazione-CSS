@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 50%;
+            height: 200px;
+            background-color: crimson;
+            display: inline-block;
+            margin: 0 -1.7px;
+            padding: 37px;
+            box-sizing: border-box;
+            /* margin-right: 1px; */
+        }
+
+        .height-test {
+            background-color: blueviolet;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .border-radius {
+            height: 400px;
+            width: 400px;
+            display: inline-block;
+            background-color: crimson;
+            border-radius: 50%;
+        }
+
+        .fancy-border-radius {
+            height: 400px;
+            width: 400px;
+            display: inline-block;
+            background-color: coral;
+            padding: 10px 2px 5px 20px;
+            border: 6px dotted blue;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsum, ipsam, quia labore
+        praesentium accusamus iste necessitatibus sint culpa eius rerum vitae sunt pariatur facere nostrum ratione, est
+        odio voluptatibus.</div>
+    <div class="box" style="background-color: antiquewhite"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Officia ipsum, ipsam, quia labore
+        praesentium accusamus iste necessitatibus <span>sint culpa</span> eius rerum vitae sunt pariatur facere nostrum
+        ratione, est
+        odio voluptatibus.</div>
+
+    <div class="height-test">
+        <figure>
+            <div class="border-radius"></div>
+            <figcaption>border-radius: 50%;</figcaption>
+        </figure>
+        <figure>
+            <div class="fancy-border-radius"></div>
+            <figcaption>border radius custom</figcaption>
+        </figure>
+    </div>
+
+</body>
+
+</html>

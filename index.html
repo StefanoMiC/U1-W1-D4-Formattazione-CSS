@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet"> -->
+    <title>Test</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* div {
+            background-color: coral;
+            min-height: 50px;
+        } */
+
+        #first-div,
+        #second-div {
+            background-color: aquamarine;
+            width: 600px;
+        }
+
+        .btn.btn--red {
+            background-color: red;
+        }
+
+        .btn {
+            height: 100px;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SPECIFICITY TEST  -->
+    <div id="first-div">
+        <h1>Titolo di prova</h1>
+        <a href="https://epicode.it">vai a Epicode</a>
+    </div>
+
+    <div id="second-div">
+        <h1>Titolo di prova</h1>
+        <a href="https://epicode.it">vai a Epicode</a>
+    </div>
+
+    <div></div>
+
+    <figure>
+        <img src="https://images.pexels.com/photos/13391438/pexels-photo-13391438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="leafs" height="100">
+        <figcaption>Autunno</figcaption>
+    </figure>
+
+
+    <button class="btn">Bottone di base</button>
+    <button class="btn">Bottone di base</button>
+    <button class="btn">Bottone di base</button>
+    <button class="btn btn--red">Bottone rosso</button>
+
+    <!-- FINE SPECIFICITY TEST  -->
+
+    <!-- FILE MULTIMEDIALI -->
+
+    <div>
+        <!-- AUDIO -->
+        <audio src="./assets/audio/file_example_MP3_5MG.mp3" controls autoplay="on" muted></audio>
+
+        <!-- VIDEO -->
+        <video src="./assets/video/file_example_OGG_480_1_7mg.ogg" controls width="300px"></video>
+        <video src="./assets/video/file_example_OGG_1920_13_3mg.ogg" controls width="300px"></video>
+        <video src="./assets/video/file_example_OGG_1920_13_3mg.ogg" width="100%" autoplay loop></video>
+
+
+        <!-- FOTO RESPONSIVE -->
+
+        <picture>
+            <source media="(min-width: 1324px)" srcset="./assets/images/earth-hi.jpg">
+            <source media="(min-width: 768px)" srcset="./assets/images/earth-md.jpg">
+
+            <img src="./assets/images/earth-sm.jpg" alt="earth from space">
+        </picture>
+
+
+        <!-- A parità di dimensione non si percepisce differenza in qualità, quindi sarebbe meglio usare il file più leggero (earth-md) -->
+        <img src="./assets/images/earth-hi.jpg" alt="earth from space" width="400">
+        <img src="./assets/images/earth-md.jpg" alt="earth from space" width="400">
+
+        <!-- IFRAME -->
+        <iframe src="https://epicode.com" frameborder="0" width="100%" height="400"></iframe>
+
+        <!-- Google maps -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190028.25709877865!2d12.39591533148785!3d41.91024148619654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2sRoma%20RM!5e0!3m2!1sit!2sit!4v1662021830612!5m2!1sit!2sit"
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <!-- youtube -->
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/aInkqzdmmf0?start=31"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+    </div>
+
+</body>
+
+</html>

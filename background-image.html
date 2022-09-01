@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immagini come sfondo</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .image-area {
+            background-image: url(./assets/images/pexels-francesco-ungaro-96420.jpg);
+            background-size: cover;
+            background-position: 60% 50%;
+            width: 1600px;
+            height: 100vh
+        }
+
+        .mario {
+            width: 400px;
+            height: 400px;
+            margin-inline: auto;
+
+            background-image: url(./assets/images/super-mario-bros-cloud-sprites-super-mario-bros-cloud-1081000.png), url(./assets/images/bit-mario-png-487410.png);
+            background-size: 50%, 50%;
+            background-repeat: repeat-x, no-repeat;
+            background-position: top, 80% 40%;
+
+            box-shadow: 0 0px 20px rgb(0 0 0 / 30%);
+        }
+
+        .mario:hover {
+            box-shadow: 0 0px 64px rgb(0 0 0 / 30%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div> <img src="./pexels-francesco-ungaro-96420.jpg" alt="" width="100%"></div> -->
+    <!-- <div class="image-area"></div> -->
+
+    <div class="mario"></div>
+</body>
+
+</html>
